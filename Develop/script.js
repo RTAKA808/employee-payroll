@@ -10,19 +10,20 @@ const collectEmployees = function() {
     let userLast=window.prompt("Please enter last name");
     let userSalary=parseFloat(prompt("Please enter Salary"));
 
-    if(isNaN(salary)){
+
+    if(isNaN(userSalary)){
       alert("Please enter a number, you didnt enter a number");
     }
+    employeesArray.push({firstName:userFirst, lastName:userLast, salary:userSalary})
+
+  
+
     
     if ((userFirst) &&
     (userLast) &&
     (userSalary)){
       repeatInput=window.confirm ("Add another?");
     } 
-    
-    else {
-      return employeesArray;
-    }
   }
  }
 
