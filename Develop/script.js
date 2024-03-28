@@ -12,7 +12,7 @@ const collectEmployees = function() {
 
 
     if(isNaN(userSalary)){
-      alert("Please enter a number, you didnt enter a number");
+      userSalary = 0;
     }
     let employee={firstName:userFirst, lastName:userLast, salary:userSalary}
     employeesArray.push(employee)
@@ -21,11 +21,8 @@ const collectEmployees = function() {
   
 
     
-    if ((userFirst) &&
-    (userLast) &&
-    (userSalary)){
+
       repeatInput=window.confirm ("Add another?");
-    } 
       
       
     }
