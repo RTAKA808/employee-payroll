@@ -14,7 +14,9 @@ const collectEmployees = function() {
     if(isNaN(userSalary)){
       alert("Please enter a number, you didnt enter a number");
     }
-    employeesArray.push({firstName:userFirst, lastName:userLast, salary:userSalary})
+    let employee={firstName:userFirst, lastName:userLast, salary:userSalary}
+    employeesArray.push(employee)
+    
 
   
 
@@ -24,19 +26,34 @@ const collectEmployees = function() {
     (userSalary)){
       repeatInput=window.confirm ("Add another?");
     } 
+      
+      
+    }
+    return employeesArray
   }
- }
+ 
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  let totalSalary=0
+for(let i=0; i<employeesArray.length; i++ ){
+  totalSalary+=employeesArray[i].salary;
+
+} 
+let avgSal=totalSalary/employeesArray.length;
+console.log(`The average salary of the employees is $ ${avgSal}`)
+
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+   let randEmp=Math.floor(Math.random()* (employeesArray.length-1));
+  let winner=employeesArray[randEmp];
+  console.log(`congrats to ${winner.firstName} ${winner.lastName} for evading arrest`)
 }
-// Math.floor(math.random())
+
 
 /*
   ====================
@@ -91,6 +108,7 @@ const trackEmployeeData = function() {
   getRandomEmployee(employees);
 
   employees.sort(function(a,b) {
+  
     if (a.lastName < b.lastName) {
       return -1;
     } else {
