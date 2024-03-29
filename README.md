@@ -21,4 +21,4 @@ Upon use, the user is prompted to enter a fist name, last name, and salary.  The
  ## Links
     Repository on github: https://github.com/RTAKA808/employee-payroll
 
-    
+![alt text](emp-tracker-ss-1.JPG)
